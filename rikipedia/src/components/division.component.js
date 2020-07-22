@@ -19,7 +19,6 @@ const RikishiRow = props => (
     </tr>
     )
 
-
 export default class SumoList extends Component {
     constructor(props){
         super(props);
