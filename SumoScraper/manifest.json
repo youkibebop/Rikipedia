@@ -1,0 +1,32 @@
+{
+    "name": "SumoScraper",
+    "version": "1.0",
+    "description": "Takes a wikipedia URL, and gets the relevant sumo information from the info card.",
+    "permissions": ["activeTab", "declarativeContent", "storage", "<all_urls>"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "page_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "img/get_started16.png",
+        "32": "img/get_started32.png",
+        "48": "img/get_started48.png",
+        "128": "img/get_started128.png"
+      }
+    },
+    "icons": {
+      "16": "img/get_started16.png",
+      "32": "img/get_started32.png",
+      "48": "img/get_started48.png",
+      "128": "img/get_started128.png"
+    },
+    "content_scripts": [{
+      "matches": ["https://en.wikipedia.org/wiki/*"],
+      "js": ["scripts/read.js"]
+    }],
+    "options_page": "options.html",
+    "manifest_version": 2
+
+  }
